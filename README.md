@@ -1,5 +1,14 @@
 # quarkus-hibernate-edu
+# local
+docker run --ulimit memlock=-1:-1 --rm=true --memory-swappiness=0 \
+    --name postgres-database -e POSTGRES_USER=sa \
+    -e POSTGRES_PASSWORD=sa -e POSTGRES_DB=person \
+    -p 5432:5432 postgres:10.5 >& /dev/null &
+mvn compile quarkus:dev
 
+
+
+# openshift
 oc login 2886795363-8443-cykoria05.environments.katacoda.com --insecure-skip-tls-verify=true -u developer -p developer
 
 oc new-project quarkus --display-name="Sample Quarkus Datatable App"
