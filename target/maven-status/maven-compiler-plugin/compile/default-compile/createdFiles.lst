@@ -1,0 +1,5 @@
+org/acme/person/model/DataTable.class
+org/acme/person/model/Person.class
+org/acme/person/PersonResource.class
+org/acme/person/model/EyeColor.class
+org/acme/person/CuteNameGenerator.class
